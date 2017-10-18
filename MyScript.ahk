@@ -179,7 +179,7 @@ SendNavAction(numpadNumber){
 	
 	
 ; Control+S saves the script and if the script is in focus, reloads the script
-#IfWinActive, C:\Users\eduque\Box Sync\Scripts\MyScript.ahk - Notepad++
+#IfWinActive, Personal - Scripts - Microsoft Visual Studio
 ~^s::
 	sleep 100
 	reload
