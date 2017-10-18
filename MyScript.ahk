@@ -9,19 +9,13 @@
 ::/shrug::¯\_(ツ)_/¯
 ::/hearteyes::😍
 ::/eyeroll::🙄
-::/adp::Tier1=8156:7456. Tier2=9156:7456
-::/maps::uuuullllll on 9/6/17
-::/graphpad::login=ucdsoftware@ucdavis.edu pw=ucdTeam2013
-::/esri::login=software2007 pw=UCDsoft2
 ::/eduroam::http://kb.ucdavis.edu/?id=2025
-::/thanks::{Enter}{Enter}Thank you for contacting IT Express.{Enter}
 ::/leaving::http://kb.ucdavis.edu/?id=0129
 ::/passphrase::http://kb.ucdavis.edu/?id=0101
 ::/password::http://kb.ucdavis.edu/?id=0101
 ::/ohd::https://ucdavis.jira.com/wiki/spaces/ITX/pages/319062684/Other+Help+Desks
 ::/accounts::http://accounts.ucdavis.edu
-::/matchmatrix::login=eduque@ucdavis.edu pw=specimen angry obsidian
-::/dev::BZkKyPhdHUUG
+
 	
 	
 
@@ -45,16 +39,6 @@
 ; My Employee IDs
 #+j::
 	Send, 752222679
-	Return
-	
-	
-
-	
-; windows+shift+l moves the currently selected window to my "blank space"
-#+l::
-	WinGetActiveTitle, Title
-	WinRestore, %Title%
-	WinMove, %Title%,, 1913, 171, 1094, 754
 	Return
 
 	
