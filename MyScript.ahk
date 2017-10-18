@@ -179,7 +179,7 @@ SendNavAction(numpadNumber){
 	
 	
 ; Control+S saves the script and if the script is in focus, reloads the script
-#IfWinActive, Personal - Scripts - Microsoft Visual Studio
+#IfWinActive, Personal-Scripts - Microsoft Visual Studio
 ~^s::
 	sleep 100
 	reload
