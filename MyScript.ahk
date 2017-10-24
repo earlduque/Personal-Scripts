@@ -107,6 +107,12 @@ GetTableName(windownumpad){
 		TableName = u_service_desk_emails.list
 	} else if (windownumpad = 6) {
 		TableName = sys_properties.list
+	} else if (windownumpad = 7) {
+		TableName = sys_upgrade_history_log.list
+	} else if (windownumpad = 8) {
+		TableName = none
+	} else if (windownumpad = 9) {
+		TableName = none
 	}
 	return TableName
 }
@@ -136,6 +142,15 @@ SendNavAction(numpadNumber){
 ^Numpad6::
 	SendNavAction(6)
 	Return
+^Numpad7::
+	SendNavAction(7)
+	Return
+^Numpad8::
+	SendNavAction(8)
+	Return
+^Numpad9::
+	SendNavAction(9)
+	Return
 
 ^Numpad0::
 	windows1 := GetTableName(1)
@@ -144,6 +159,9 @@ SendNavAction(numpadNumber){
 	windows4 := GetTableName(4)
 	windows5 := GetTableName(5)
 	windows6 := GetTableName(6)
+	windows7 := GetTableName(7)
+	windows8 := GetTableName(8)
+	windows9 := GetTableName(9)
 	WinGetActiveStats, Title, Width, Height, X, Y
 	guiWidth := X
 	guiHeight := Y+200
@@ -155,6 +173,9 @@ SendNavAction(numpadNumber){
 	Gui, Add, Text,,numpad4. %windows4%
 	Gui, Add, Text,,numpad5. %windows5%
 	Gui, Add, Text,,numpad6. %windows6%
+	Gui, Add, Text,,numpad7. %windows7%
+	Gui, Add, Text,,numpad8. %windows8%
+	Gui, Add, Text,,numpad9. %windows9%
 	Gui -Caption
 	Gui, Show, X%guiWidth% Y%guiHeight%
 	loop {
