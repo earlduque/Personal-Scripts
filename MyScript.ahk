@@ -58,7 +58,7 @@
 
 	
 	
-
+/*
 ; Control+Shift+V Opens up a TightVNC viewer, and logs into the CCMIS
 ^+v::
 	sleep, 300
@@ -70,7 +70,7 @@
 	sleep, 500
 	Send, itxvnc{Enter}
 	Return
-
+*/
 	
 
 ;doesn't allow windows+m
@@ -94,63 +94,6 @@
 
 ;various table grabs in SN
 #IfWinActive, ServiceNow
-GetTableName(windownumpad){
-	if (windownumpad = 1){
-		TableName = incident.list
-	} else if (windownumpad = 2){
-		TableName = sys_user.list
-	} else if (windownumpad = 3){
-		TableName = sys_user_group.list
-	} else if (windownumpad = 4){
-		TableName = sc_cat_item.list
-	} else if (windownumpad = 5){
-		TableName = u_service_desk_emails.list
-	} else if (windownumpad = 6) {
-		TableName = sys_properties.list
-	} else if (windownumpad = 7) {
-		TableName = sys_upgrade_history_log.list
-	} else if (windownumpad = 8) {
-		TableName = none
-	} else if (windownumpad = 9) {
-		TableName = none
-	}
-	return TableName
-}
-
-SendNavAction(numpadNumber){
-	send ^!f
-	sleep,100
-	zTableName := GetTableName(numpadNumber)
-	send, %zTableName%{enter}
-}
-
-^Numpad1::
-	SendNavAction(1)
-	Return
-^Numpad2::
-	SendNavAction(2)
-	Return
-^Numpad3::
-	SendNavAction(3)
-	Return
-^Numpad4::
-	SendNavAction(4)
-	Return
-^Numpad5::
-	SendNavAction(5)
-	Return
-^Numpad6::
-	SendNavAction(6)
-	Return
-^Numpad7::
-	SendNavAction(7)
-	Return
-^Numpad8::
-	SendNavAction(8)
-	Return
-^Numpad9::
-	SendNavAction(9)
-	Return
 
 ^Numpad0::
 	windows1 := GetTableName(1)
@@ -167,28 +110,121 @@ SendNavAction(numpadNumber){
 	guiHeight := Y+200
 	Gui, New,,SN Tables
 	gui, font, s14
-	Gui, Add, Text,,numpad1. %windows1%
-	Gui, Add, Text,,numpad2. %windows2%
-	Gui, Add, Text,,numpad3. %windows3%
-	Gui, Add, Text,,numpad4. %windows4%
-	Gui, Add, Text,,numpad5. %windows5%
-	Gui, Add, Text,,numpad6. %windows6%
-	Gui, Add, Text,,numpad7. %windows7%
-	Gui, Add, Text,,numpad8. %windows8%
-	Gui, Add, Text,,numpad9. %windows9%
+	Gui, Add, Text,gLaunchNumpad1,numpad1. %windows1%
+	Gui, Add, Text,gLaunchNumpad2,numpad2. %windows2%
+	Gui, Add, Text,gLaunchNumpad3,numpad3. %windows3%
+	Gui, Add, Text,gLaunchNumpad4,numpad4. %windows4%
+	Gui, Add, Text,gLaunchNumpad5,numpad5. %windows5%
+	Gui, Add, Text,gLaunchNumpad6,numpad6. %windows6%
+	Gui, Add, Text,gLaunchNumpad7,numpad7. %windows7%
+	Gui, Add, Text,gLaunchNumpad8,numpad8. %windows8%
+	Gui, Add, Text,gLaunchNumpad9,numpad9. %windows9%
 	Gui -Caption
 	Gui, Show, X%guiWidth% Y%guiHeight%
-	loop {
-		if (GetKeyState("Numpad0","P")=0 && GetKeyState("Ctrl","P")=0){
-			Gui Destroy
-			WinActivate, %Title%
-			return
-		}
-		sleep 500
+	while (GetKeyState("Numpad0", "P") or GetKeyState("Ctrl","P")) {
+		if (GetKeyState("Numpad1", "P")) 
+			gosub LaunchNumpad1
+		if (GetKeyState("Numpad2", "P"))
+			gosub LaunchNumpad2
+		if (GetKeyState("Numpad3", "P"))
+			gosub LaunchNumpad3
+		if (GetKeyState("Numpad4", "P"))
+			gosub LaunchNumpad4
+		if (GetKeyState("Numpad5", "P"))
+			gosub LaunchNumpad5
+		if (GetKeyState("Numpad6", "P"))
+			gosub LaunchNumpad6
+		if (GetKeyState("Numpad7", "P"))
+			gosub LaunchNumpad7
+		if (GetKeyState("Numpad8", "P"))
+			gosub LaunchNumpad8
+		if (GetKeyState("Numpad9", "P"))
+			gosub LaunchNumpad9
 	}
+	sleep 500
+	Gui Destroy
+	WinActivate, %Title%
 	return
 	
-	
+LaunchNumpad1:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(1)
+	return
+LaunchNumpad2:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(2)
+	return
+LaunchNumpad3:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(3)
+	return
+LaunchNumpad4:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(4)
+	return
+LaunchNumpad5:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(5)
+	return
+LaunchNumpad6:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(6)
+	return
+LaunchNumpad7:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(7)
+	return
+LaunchNumpad8:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(8)
+	return
+LaunchNumpad9:
+	Gui Destroy
+	WinActivate, %Title%
+	SendNavAction(9)
+	return
+
+GetTableName(windownumpad){
+	if (windownumpad = 1){
+		TableName = incident.list
+	} else if (windownumpad = 2){
+		TableName = sys_user.list
+	} else if (windownumpad = 3){
+		TableName = sys_user_group.list
+	} else if (windownumpad = 4){
+		TableName = sc_cat_item.list
+	} else if (windownumpad = 5){
+		TableName = u_service_desk_emails.list
+	} else if (windownumpad = 6) {
+		TableName = sys_properties.list
+	} else if (windownumpad = 7) {
+		TableName = sys_upgrade_history_log.list
+	} else if (windownumpad = 8) {
+		TableName = sys_user_role.list
+	} else if (windownumpad = 9) {
+		TableName = none
+	}
+	return TableName
+}
+
+SendNavAction(numpadNumber){
+	send, {ctrl down}{alt down}f{ctrl up}{alt up}
+	sleep,100
+	zTableName := GetTableName(numpadNumber)
+	sendinput, %zTableName%{enter}
+}
+
+
+
+
 	
 ; Control+S saves the script and if the script is in focus, reloads the script
 #IfWinActive, Personal-Scripts - Microsoft Visual Studio
