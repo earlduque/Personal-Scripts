@@ -9,6 +9,7 @@
 ::/shrug::¯\_(ツ)_/¯
 ::/hearteyes::😍
 ::/eyeroll::🙄
+::/lod::ಠ_ಠ
 ::/eduroam::http://kb.ucdavis.edu/?id=2025
 ::/leaving::http://kb.ucdavis.edu/?id=0129
 ::/passphrase::http://kb.ucdavis.edu/?id=0101

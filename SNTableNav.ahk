@@ -123,46 +123,55 @@ LaunchEdit:
 	return
 
 LaunchEdit1:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName1
 	reload
 	return
 LaunchEdit2:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName2
 	reload
 	return
 LaunchEdit3:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName3
 	reload
 	return
 LaunchEdit4:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName4
 	reload
 	return
 LaunchEdit5:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName5
 	reload
 	return
 LaunchEdit6:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName6
 	reload
 	return
 LaunchEdit7:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName7
 	reload
 	return
 LaunchEdit8:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName8
 	reload
 	return
 LaunchEdit9:
+	Gui Destroy
 	InputBox, NewShortcut, Edit Shortcut, Please type the new shortcut below.`n`nExample:`nincident.list will load the incident table`nincident.do will start a new record on the incident table
 	IniWrite, %NewShortcut%, %A_ScriptFullPath%, TableNames, TableName9
 	reload
@@ -210,5 +219,5 @@ TableName5=u_service_desk_emails.list
 TableName6=sys_properties.list
 TableName7=sys_upgrade_history_log.list
 TableName8=sys_user_role.list
-TableName9=No Shortcut
+TableName9=sys_email.list
 */
