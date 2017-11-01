@@ -4,6 +4,7 @@
 #IfWinActive, ServiceNow
 
 ^Numpad0::
+	send, { ctrl down } {alt down}f{ ctrl up }{alt up}
 	windows1 := GetTableName(1)
 	windows2 := GetTableName(2)
 	windows3 := GetTableName(3)
