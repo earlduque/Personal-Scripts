@@ -1,15 +1,17 @@
 ﻿SetTitleMatchMode, 2
 
 ; Various Text Replacements
-:://gliderecord::var newGR = new GlideRecord('Table_name');{Enter}newGR.addQuery('Column_name', filter_value);{Enter}newGR.query();
+:://gliderecord::var newGR = new GlideRecord('Table_name');{Enter}newGR.addQuery('Column_name', filter_value);{Enter}newGR.query();{Enter}newGR.next();
 :://getuser::javascript:gs.getUserID()
 :://getlocation::javascript:gs.getUser().getLocation()
 :://getfield::javascript:gs.getUser().getRecord().getDisplayValue('column_name')
 :://script:://The following was created by admin-eduque on __/__/____ in ucdavisietdev{Enter}//Description: 
+:://bgscript::findValue();{Enter}function findValue(){{}{Enter}gs.print('Message: ');{Enter}{}}
 ::/shrug::¯\_(ツ)_/¯
 ::/hearteyes::😍
 ::/eyeroll::🙄
 ::/lod::ಠ_ಠ
+::/tableflip::(╯°□°）╯︵ ┻━┻
 ::/eduroam::http://kb.ucdavis.edu/?id=2025
 ::/leaving::http://kb.ucdavis.edu/?id=0129
 ::/passphrase::http://kb.ucdavis.edu/?id=0101
