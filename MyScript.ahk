@@ -36,13 +36,6 @@
 	Send, earliodookie@gmail.com
 	Return
 	
-	
-	
-	
-; My Employee IDs
-#+j::
-	Send, 752222679
-	Return
 
 	
 	
@@ -61,19 +54,6 @@
 
 	
 	
-/*
-; Control+Shift+V Opens up a TightVNC viewer, and logs into the CCMIS
-^+v::
-	sleep, 300
-	send, {Lwin}
-	sleep, 300
-	send, tightvnc viewer{Enter}
-	sleep, 900
-	send, {Enter}
-	sleep, 500
-	Send, itxvnc{Enter}
-	Return
-*/
 	
 
 ;doesn't allow windows+m
