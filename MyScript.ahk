@@ -1,15 +1,18 @@
 ﻿SetTitleMatchMode, 2
 
 ; Various Text Replacements
-:://gliderecord::var newGR = new GlideRecord('Table_name');{Enter}newGR.addQuery('Column_name', filter_value);{Enter}newGR.query();{Enter}newGR.next();
+:://gliderecord::var gr = new GlideRecord('Table_name');{Enter}gr.addQuery('Column_name', filter_value);{Enter}gr.query();{Enter}gr.next();
+:://gliderecordw::var gr = new GlideRecord('Table_name');{Enter}gr.addQuery('Column_name', filter_value);{Enter}gr.query();{Enter}while (gr.next()){}
 :://getuser::javascript:gs.getUserID()
 :://getlocation::javascript:gs.getUser().getLocation()
 :://getfield::javascript:gs.getUser().getRecord().getDisplayValue('column_name')
 :://script:://The following was created by admin-eduque on __/__/____ in ucdavisietdev{Enter}//Description: 
-:://bgscript::findValue();{Enter}function findValue(){{}{Enter}gs.print('Message: ');{Enter}{}}
+:://bgscript::findValue();{Enter}function findValue(){{}{Enter}{Enter}gs.print('Message: ' + );{Enter}{}}
+:://bgscriptgr::findValue();{Enter}function findValue(){{}{Enter}{Enter}var gr = new GlideRecord('Table_name');{Enter}gr.addQuery('Column_name', filter_value);{Enter}gr.query();{Enter}gr.next();{Enter}{Enter}gs.print('Message: ' + );{Enter}{}}
 ::/shrug::¯\_(ツ)_/¯
 ::/hearteyes::😍
 ::/eyeroll::🙄
+::/poop::💩
 ::/lod::ಠ_ಠ
 ::/tableflip::(╯°□°）╯︵ ┻━┻
 ::/eduroam::http://kb.ucdavis.edu/?id=2025
