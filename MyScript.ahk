@@ -58,6 +58,24 @@
 	
 	
 
+;open story with naming convention in dev
+^!n::
+	OriginalClipboard = %clipboard%
+	IfNotInString, OriginalClipboard, STRY 
+	{
+		Return
+	}
+	sleep, 300
+	send, {tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}^a^c
+	SecondClipboard = %clipboard%
+	send, ^+n
+	sleep, 300
+	newLink = https://ucdavisietdev.service-now.com/nav_to.do?uri=sys_update_set.do`%3Fsys_id`%3D-1`%26sysparm_query=name=IET %OriginalClipboard% %SecondClipboard%
+	send, %newLink%{Enter}
+	Return
+
+
+
 ;doesn't allow windows+m
 #m::Return 
 
