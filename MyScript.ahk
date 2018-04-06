@@ -7,6 +7,7 @@
 :://getfield::javascript:gs.getUser().getRecord().getDisplayValue('column_name')
 :://bgscript::findValue();{Enter}function findValue(){{}{Enter}{Enter}gs.print('Message: ' + );{Enter}{}}
 :://bgscriptgr::findValue();{Enter}function findValue(){{}{Enter}{Enter}var gr = new GlideRecord('Table_name');{Enter}gr.addQuery('Column_name', filter_value);{Enter}gr.query();{Enter}gr.next();{Enter}{Enter}gs.print('Message: ' + );{Enter}{}}
+:://bgscriptgrget::findValue();{Enter}function findValue(){{}{Enter}{Enter}var gr = new GlideRecord('Table_name');{Enter}gr.get('sys_id');{Enter}{Enter}{Enter}gs.print('Message: ' + );{Enter}{}}
 ::/shrug::¯\_(ツ)_/¯
 ::/hearteyes::😍
 ::/eyeroll::🙄
