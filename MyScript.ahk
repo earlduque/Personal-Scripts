@@ -67,7 +67,9 @@
 		Return
 	}
 	sleep, 300
-	send, {tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}^a^c
+	send, {tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}
+	sleep, 300
+	send, ^c
 	SecondClipboard = %clipboard%
 	send, ^+n
 	sleep, 300
