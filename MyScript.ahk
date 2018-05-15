@@ -21,6 +21,7 @@
 ::/password::http://kb.ucdavis.edu/?id=0101
 ::/ohd::https://ucdavis.jira.com/wiki/spaces/ITX/pages/319062684/Other+Help+Desks
 ::/accounts::http://accounts.ucdavis.edu
+::/resume::résumé
 
 	
 	
@@ -68,7 +69,7 @@
 	}
 	sleep, 300
 	send, {tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}{tab}
-	sleep, 300
+	sleep, 1000
 	send, ^c
 	SecondClipboard = %clipboard%
 	send, ^+n
