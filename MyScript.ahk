@@ -58,6 +58,40 @@
 
 	
 	
+
+; story ticker
+$#NumpadAdd::
+	WinGetTitle, OriginalWindow, A
+	WinActivate, Notepad++
+	Sleep, 500
+	Send, ^{END}
+	Send, {SHIFT}+{UP}
+	Send, {SHIFT}+{UP}
+	Send, {SHIFT}+{UP}
+	Send, {SHIFT}+{END}
+	Send, ^x
+	Send, ^{HOME}
+	Send, ^v
+	Send, ^{END}
+	Send, ^s
+	WinActivate, %OriginalWindow%
+	Return
+$#NumpadSub::
+	WinGetTitle, OriginalWindow, A
+	WinActivate, Notepad++
+	Sleep, 500
+	Send, ^{HOME}
+	Send, {SHIFT}+{DOWN}
+	Send, {SHIFT}+{DOWN}
+	Send, {SHIFT}+{DOWN}
+	Send, {SHIFT}+{END}
+	Send, ^x
+	Send, ^{END}
+	Send, ^v
+	Send, ^{END}
+	Send, ^s
+	WinActivate, %OriginalWindow%
+	Return
 	
 
 ;open story with naming convention in dev
