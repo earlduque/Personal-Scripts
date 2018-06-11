@@ -57,8 +57,14 @@
 	Return
 
 	
-	
 
+; Types in everything on the scrum task automation tab
+$#Numpad9::
+	Send, Development{Tab}c{Tab}IET Service Management Developers{Tab}{Tab}QA1{Tab}t{Tab}IET Service Management Developers{Tab}{Tab}Move to test{Tab}c{Tab}IET Service Management Developers{Tab}{Tab}QA2{Tab}t{Tab}IET Service Management Developers{Tab}{Tab}UAT{Tab}t{Tab}IET Service Management{Tab}
+
+
+	
+/*
 ; story ticker
 $#NumpadAdd::
 	WinGetTitle, OriginalWindow, A
@@ -92,7 +98,8 @@ $#NumpadSub::
 	Send, ^s
 	WinActivate, %OriginalWindow%
 	Return
-	
+*/
+
 
 ;open story with naming convention in dev
 ^!n::
